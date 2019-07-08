@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+	version="2.2">
+
+	<navigation-rule>
+		<from-view-id>/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{loginBean.validateUserLogin}</from-action>
+			<from-outcome>Student_Homepage</from-outcome>
+			<to-view-id>/Student_Homepage.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{loginBean.validateUserLogin}</from-action>
+			<from-outcome>index</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{loginBean.validateUserLogin}</from-action>
+			<from-outcome>failure</from-outcome>
+			<to-view-id>/failure.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{loginBean.validateUserLogin}</from-action>
+			<from-outcome>Admin_Homepage</from-outcome>
+			<to-view-id>/Admin_Homepage.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+	<navigation-rule>
+		<from-view-id>/Admin_Homepage.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{AdminHomepageBean.RedirectCoolerRequest}</from-action>
+			<from-outcome>Cooler_Request</from-outcome>
+			<to-view-id>/Cooler_Request.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{AdminHomepageBean.RedirectCoolerRequest}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{AdminHomepageBean.RedirectVehicleRequest}</from-action>
+			<from-outcome>Vehicle_Request</from-outcome>
+			<to-view-id>/Vehicle_Request.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{AdminHomepageBean.RedirectVehicleRequest}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{AdminHomepageBean.RedirectElectricityBill}</from-action>
+			<from-outcome>Electricity_Bill</from-outcome>
+			<to-view-id>/Electricity_Bill.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{AdminHomepageBean.RedirectElectricityBill}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{AdminHomepageBean.RedirectAllotRoom}</from-action>
+			<from-outcome>Allot_Room</from-outcome>
+			<to-view-id>/Allot_Room.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{AdminHomepageBean.RedirectAllotRoom}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{AdminHomepageBean.RedirectRoomChart}</from-action>
+			<from-outcome>Chart</from-outcome>
+			<to-view-id>/Hostel_Chart.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{AdminHomepageBean.RedirectRoomChart}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+			<navigation-case>
+			<from-action>#{LogoutBean.logout}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/Student_Homepage.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{StudentHomepageBean.RedirectCoolerForm}</from-action>
+			<from-outcome>Register_Cooler</from-outcome>
+			<to-view-id>/Register_Cooler.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{StudentHomepageBean.RedirectCoolerForm}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{StudentHomepageBean.RedirectVehicleForm}</from-action>
+			<from-outcome>Register_Vehicle</from-outcome>
+			<to-view-id>/Register_Vehicle.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{StudentHomepageBean.RedirectVehicleForm}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{LogoutBean.logout}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+	<navigation-rule>
+		<from-view-id>/Register_Cooler.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{CoolerRegistrationBean.submit}</from-action>
+			<from-outcome>Register_Cooler</from-outcome>
+			<to-view-id>/Register_Cooler.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{CoolerRegistrationBean.submit}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{LogoutBean.logout}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+	<navigation-rule>
+		<from-view-id>/Register_Vehicle.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{VehicleRegistrationBean.submit}</from-action>
+			<from-outcome>Register_Vehicle</from-outcome>
+			<to-view-id>/Register_Vehicle.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{LogoutBean.logout}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{VehicleRegistrationBean.submit}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+	<navigation-rule>
+		<from-view-id>/Cooler_Request.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{CoolerRequestBean.onAllow}</from-action>
+			<from-outcome>Cooler_Request</from-outcome>
+			<to-view-id>/Cooler_Request.xhtml</to-view-id>
+		</navigation-case>
+			<navigation-case>
+		<from-action>#{CoolerRequestBean.onDeny}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{CoolerRequestBean.onAllow}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{CoolerRequestBean.onDeny}</from-action>
+			<from-outcome>Cooler_Request</from-outcome>
+			<to-view-id>/Cooler_Request.xhtml</to-view-id>
+		</navigation-case>
+	
+		<navigation-case>
+			<from-action>#{LogoutBean.logout}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+
+	<navigation-rule>
+		<from-view-id>/Vehicle_Request.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{VehicleRequestBean.onAllow}</from-action>
+			<from-outcome>Vehicle_Request</from-outcome>
+			<to-view-id>/Vehicle_Request.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{VehicleRequestBean.onDeny}</from-action>
+			<from-outcome>Vehicle_Request</from-outcome>
+			<to-view-id>/Vehicle_Request.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{VehicleRequestBean.onAllow}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{VehicleRequestBean.onDeny}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{LogoutBean.logout}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+	<navigation-rule>
+		<from-view-id>/Electricity_Bill.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{ElectricityBillBean.RedirectHor}</from-action>
+			<from-outcome>HOR</from-outcome>
+			<to-view-id>/Electricity_Bill_Hor.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{ElectricityBillBean.RedirectWing}</from-action>
+			<from-outcome>WING</from-outcome>
+			<to-view-id>/Electricity_Bill_Wing.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{ElectricityBillBean.RedirectStu}</from-action>
+			<from-outcome>STUDENT</from-outcome>
+			<to-view-id>/Electricity_Bill_Student.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{LogoutBean.logout}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+
+	<navigation-rule>
+		<from-view-id>/Electricity_Bill_Wing.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{ElectricityBillBean.RedirectHor}</from-action>
+			<from-outcome>HOR</from-outcome>
+			<to-view-id>/Electricity_Bill_Hor.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{ElectricityBillBean.RedirectWing}</from-action>
+			<from-outcome>WING</from-outcome>
+			<to-view-id>/Electricity_Bill_Wing.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{ElectricityBillBean.RedirectStu}</from-action>
+			<from-outcome>STUDENT</from-outcome>
+			<to-view-id>/Electricity_Bill_Student.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{ElectricityBillBean.addWingBill}</from-action>
+			<from-outcome>Electricity_Wing</from-outcome>
+			<to-view-id>/Electricity_Bill_Wing.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{LogoutBean.logout}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+		
+	</navigation-rule>
+
+
+	<navigation-rule>
+		<from-view-id>/Electricity_Bill_Hor.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{ElectricityBillBean.RedirectHor}</from-action>
+			<from-outcome>HOR</from-outcome>
+			<to-view-id>/Electricity_Bill_Hor.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{ElectricityBillBean.RedirectWing}</from-action>
+			<from-outcome>WING</from-outcome>
+			<to-view-id>/Electricity_Bill_Wing.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{ElectricityBillBean.RedirectStu}</from-action>
+			<from-outcome>STUDENT</from-outcome>
+			<to-view-id>/Electricity_Bill_Student.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{ElectricityBillBean.addHorBill}</from-action>
+			<from-outcome>Electricity_Hor</from-outcome>
+			<to-view-id>/Electricity_Bill_Hor.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{LogoutBean.logout}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+	<navigation-rule>
+		<from-view-id>/Electricity_Bill_Student.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{ElectricityBillBean.AddStuFee}</from-action>
+			<from-outcome>Electricity_Student</from-outcome>
+			<to-view-id>/Electricity_Bill_Student.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-action>#{ElectricityBillBean.RedirectHor}</from-action>
+			<from-outcome>HOR</from-outcome>
+			<to-view-id>/Electricity_Bill_Hor.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{ElectricityBillBean.RedirectWing}</from-action>
+			<from-outcome>WING</from-outcome>
+			<to-view-id>/Electricity_Bill_Wing.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{ElectricityBillBean.RedirectStu}</from-action>
+			<from-outcome>STUDENT</from-outcome>
+			<to-view-id>/Electricity_Bill_Student.xhtml</to-view-id>
+		</navigation-case>
+<navigation-case>
+			<from-action>#{LogoutBean.logout}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/Allot_Room.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{AllotRoomBean.submitsingle}</from-action>
+			<from-outcome>Room_Allot</from-outcome>
+			<to-view-id>/Allot_Room.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-action>#{AllotRoomBean.submitall}</from-action>
+			<from-outcome>Room_Allot</from-outcome>
+			<to-view-id>/Allot_Room.xhtml</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-action>#{AllotRoomBean.Redirectdeallocate}</from-action>
+			<from-outcome>deallocate</from-outcome>
+			<to-view-id>/Deallocate_Room.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{LogoutBean.logout}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+
+
+	<navigation-rule>
+		<from-view-id>/Deallocate_Room.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{AllotRoomBean.deallocatebyroom}</from-action>
+			<from-outcome>deallocate</from-outcome>
+			<to-view-id>/Deallocate_Room.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{AllotRoomBean.deallocatebystudent}</from-action>
+			<from-outcome>deallocate</from-outcome>
+			<to-view-id>/Deallocate_Room.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{LogoutBean.logout}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+
+
+</faces-config>

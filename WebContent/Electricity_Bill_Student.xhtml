@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>HMS | Electricity Bill</title>
+	<style type="text/css">
+.textPlacement {
+	margin: 12px;
+}.logout {
+background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+ border-style: solid;
+  border-width: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  border-color: black;
+
+}
+.successText {
+	color: black;
+	margin: 12px;
+	font-weight: bold;
+}
+.style {
+	font-weight: bold;
+	font-size: 18px;
+}
+.logout:hover {
+	background-color: #45a049;
+}
+.logout1 {
+background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  top:0;
+  position:absolute;
+  right:0;
+}
+.logout1:hover {
+	background-color: #45a049;
+}
+</style>
+	<h:outputStylesheet library="css" name="style1.css" />
+</h:head>
+<h:body>
+<h2>Electricity Bill</h2>
+	<font color="Black">		Welcome, <span id="userName"><h:outputLabel
+					class="successText" value="#{loginBean.userName}" /></span></font>
+					<br/>
+					<br/>
+					<h:form>
+		<div id="submitBtn">
+			<h:commandButton value="Logout" styleClass="logout1"
+				action="#{LogoutBean.logout}" />
+		</div>
+	</h:form>
+	<h:messages globalOnly="true" style="color:red;margin:8px;" />
+
+	<h:form id="ElectricForm2">
+		<div id="submitBtn" class="textPlacement">
+			<h:commandButton value="HOR Wise" styleClass="logout"
+				action="#{ElectricityBillBean.RedirectHor}" />
+		</div>
+		<div id="submitBtn1" class="textPlacement">
+			<h:commandButton value="Floor Wise" styleClass="logout"
+				action="#{ElectricityBillBean.RedirectWing}" />
+		</div>
+		<div id="submitBtn2" class="textPlacement">
+			<h:commandButton value="Student Wise" styleClass="logout"
+				action="#{ElectricityBillBean.RedirectStu}" />
+		</div>
+		<hr />
+		<hr />
+
+		<div id="IdDiv" class="textPlacement">
+			<h:outputLabel value="Student_id: " styleClass="style" />
+			<h:inputText value="#{ElectricityBillBean.fee_id}" />
+		</div>
+		<div id="FeeDiv" class="textPlacement">
+			<h:outputLabel value="Fee: " styleClass="style" />
+			<h:inputText value="#{ElectricityBillBean.billvalue}" />
+		</div>
+		<div id="submitBtn2" class="textPlacement">
+			<h:commandButton value="ADD Bill" styleClass="logout"
+				action="#{ElectricityBillBean.AddStuFee()}" />
+		</div>
+
+
+	</h:form>
+</h:body>
+</html>

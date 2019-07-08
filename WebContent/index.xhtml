@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>HMS | Login</title>
+	<style type="text/css">
+.textPlacement {
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	width: 100%;
+	margin-bottom: 20px;
+	height: 40px;
+	color: white;
+	font-size: 16px;
+}
+
+.button {
+	color: blue;
+	text-align: center;
+}
+
+.text {
+	color: blue;
+}
+
+.Box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 350px;
+	height: 420px;
+	padding: 80px 40px;
+	box-sizing: border-box;
+	background: rgba(0, 0, 0, .7);
+}
+
+.Bimage {
+	background-image: url("resources/images/DA1.jpg");
+	background-size: cover;
+
+}
+
+.user {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: calc(-100px/ 2);
+	left: calc(50% - 50px);
+}
+
+.submit {
+	border: none;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+	background: blue;
+	cursor: pointer;
+	border-radius: 20px;
+	margin-left: 100px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.submit:hover {
+	background: #efed40;
+	color: #262626;
+}
+
+</style>
+
+</h:head>
+<h:body styleClass="Bimage">
+
+
+
+	<h:form id="loginForm" styleClass="Box">
+		<h:graphicImage library="images" name="admin.gif" styleClass="user"></h:graphicImage>
+		<h:messages globalOnly="true" style="color:white;margin:8px;" />
+		<div class="button">
+		<font color="WHITE">	<h2>DA-IICT HMS</h2> </font>
+		</div>
+		<div id="userNameDiv" class="textPlacement">
+			<h:outputLabel value="Username: " />
+			<h:inputText value="#{loginBean.userName}" required=""
+				oninvalid="this.setCustomValidity('User ID is a must')"
+				styleClass="text" />
+			<h:message for="userName"></h:message>
+		</div>
+		<div id="passwordDiv" class="textPlacement">
+			<h:outputLabel value="Password: " />
+
+			<h:inputSecret value="#{loginBean.password}" required="true"
+				styleClass="text">
+			</h:inputSecret>
+
+			<h:message for="password"></h:message>
+		</div>
+		<div id="submitBtn">
+			<h:commandButton value="LOGIN" styleClass="submit"
+				action="#{loginBean.validateUserLogin}" />
+		</div>
+
+	</h:form>
+
+</h:body>
+</html>

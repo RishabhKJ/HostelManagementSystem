@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>HMS | Vehicle Registration</title>
+	<link rel="stylesheet"
+		href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"></link>
+	<link rel="stylesheet" href="/resources/demos/style.css"></link>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<style type="text/css">
+.textPlacement {
+	margin: 12px;
+}
+
+.back {
+	background-color: #00008b;
+}
+
+.head {
+	text-color: white;
+}
+
+.style {
+	font-weight: bold;
+	font-size: 22px;
+}
+</style>
+	<h:outputStylesheet library="css" name="style.css" />
+
+</h:head>
+<h:body styleClass="back">
+	<h:form>
+		<div id="submitBtn">
+			<h:commandButton value="Logout" styleClass="logout"
+				action="#{LogoutBean.logout}" />
+		</div>
+	</h:form>
+	<font color="WHITE"><h2>Vehicle Registration</h2></font>
+	<div id="result">
+		<font color="WHITE">Welcome, <h:outputLabel class="successText"
+				value="#{loginBean.userName}" /></font>
+
+	</div>
+	<br />
+	<br />
+
+
+
+	<h:form id="VehicleForm" styleClass="container">
+		<h:messages globalOnly="true" style="color:Black;margin:8px;" />
+		<div id="VehicletypeDiv" class="textPlacement">
+			<h:outputLabel value="Vehicle type: " styleClass="style" />
+			<h:inputText value="#{VehicleRegistrationBean.vehicletype}"
+				styleClass="textarea" required="true" />
+
+		</div>
+		<div id="company" class="textPlacement">
+			<h:outputLabel value="Vehicle Number: " styleClass="style" />
+			<h:inputText value="#{VehicleRegistrationBean.number}"
+				styleClass="textarea" required="true" />
+
+		</div>
+		<div id="arrivaldate" class="textPlacement">
+			<h:outputLabel value="Arrival date: " styleClass="style" />
+			<h:inputText value="#{VehicleRegistrationBean.arrivaldate}"
+				styleClass="textarea" required="true" />
+
+
+		</div>
+		<div id="depaturedate" class="textPlacement">
+			<h:outputLabel value="Student License Number: " styleClass="style" />
+			<h:inputText value="#{VehicleRegistrationBean.license}"
+				styleClass="textarea" required="true" />
+
+		</div>
+
+		<div id="reason" class="textPlacement">
+			<h:outputLabel value="Reason: " styleClass="style" />
+			<h:inputText value="#{VehicleRegistrationBean.reason}"
+				styleClass="textarea" required="true" />
+
+		</div>
+		<div id="submitBtn" class="textPlacement">
+			<h:commandButton value="Submit" styleClass="submit"
+				action="#{VehicleRegistrationBean.submit}" />
+		</div>
+	</h:form>
+</h:body>
+</html>

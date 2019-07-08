@@ -1,0 +1,79 @@
+@charset "ISO-8859-1";
+
+.coolerTable {   
+   border-collapse:collapse;
+   border:1px solid #000000;
+}
+.WingTable {   
+ text-align:center;
+   background:none repeat scroll 0 0  #FFFFFF;
+   border-bottom:1px solid #FF0000;  
+   padding:2px;
+   color: black;
+   font-size: 15px;
+   
+}
+.RoomTable {   
+ text-align:center;
+   background:none repeat scroll 0 0  #f4a460;
+   border-bottom:1px solid #FF0000;  
+   padding:2px;
+   color: black;
+}
+.StudentTable {   
+ text-align:center;
+   background:none repeat scroll 0 0  #00008b;
+   border-bottom:1px solid #FF0000;  
+   padding:2px;
+   color: white;
+}
+.FloorTable{
+	 text-align:center;
+   background:none repeat scroll 0 0  #00008b;
+   border-bottom:1px solid #FF0000;  
+   padding:2px;
+   color: white;
+	
+	
+}
+.coolerTableHeader {
+   text-align:center;
+   background:none repeat scroll 0 0 #000000;
+   border-bottom:1px solid #000000;  
+   padding:2px;
+   color: white;
+}
+.coolerTableOddRow {
+   text-align:center;
+   background:none repeat scroll 0 0  #f4a460;	
+}
+
+
+.coolerTableEvenRow {
+   text-align:center;
+   background:none repeat scroll 0 0 #00008b;
+   color: white;
+}
+
+.vehicleTable {   
+   border-collapse:collapse;
+   border:1px solid #000000;
+}
+
+.vehicleTableHeader {
+   text-align:center;
+   background:none repeat scroll 0 0 #B5B5B5;
+   border-bottom:1px solid #000000;  
+   padding:2px;
+}
+.vehicleTableOddRow {
+   text-align:center;
+   background:none repeat scroll 0 0 #FFFFFF;	
+}
+
+
+.vehicleTableEvenRow {
+   text-align:center;
+   background:none repeat scroll 0 0 #D3D3D3;
+}
+

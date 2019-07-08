@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>HMS | Login</title>
+	<style type="text/css">
+.textPlacement {
+	margin: 12px;
+}
+
+.successText {
+	color: black;
+	margin: 12px;
+	font-weight: bold;
+}
+.logout {
+	background-color: #4CAF50;
+	color: white;
+	padding: 12px 20px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-left: 90px;
+	border-color: Black
+}
+
+.logout:hover {
+	background-color: #45a049;
+}
+
+.logout1 {
+	background-color: #4CAF50;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	top: 0;
+	position: absolute;
+	right: 0;
+}
+
+.logout1:hover {
+	background-color: #45a049;
+}
+.successText {
+	color: black;
+	margin: 12px;
+	font-weight: bold;
+}
+.style {
+	font-weight: bold;
+	font-size: 18px;
+}
+</style>
+</h:head>
+<h:body>
+<h2>Room Allotment</h2>
+
+
+
+
+	<font color="Black"> Welcome, <span id="userName"><h:outputLabel
+				class="successText" value="#{loginBean.userName}" /></span></font>
+	<br />
+	<br />
+	<h:form id="DeallocateForm">
+	<h:messages globalOnly="true" style="color:red;margin:8px;" />
+	<div id="submitBtn">
+			<h:commandButton value="Logout" styleClass="logout1"
+				action="#{LogoutBean.logout}" />
+		</div>
+	
+<h:messages globalOnly="true" style="color:red;margin:8px;" />
+		<div id="RoomDiv" class="textPlacement">
+		
+			<h:outputLabel value="Room:" styleClass="style"/>
+			<h:inputText value="#{AllotRoomBean.deallocateroom}" />
+	
+		</div>
+		<br/>
+		<br/>
+		
+		<div id="submitBtn" class="textPlacement">
+			<h:commandButton value="Deallocate By room" styleClass="logout"
+				action="#{AllotRoomBean.deallocatebyroom}" />
+		</div>
+		<br/>
+		<div id="StudentDiv" class="textPlacement">
+		
+			<h:outputLabel value="Student ID:" styleClass="style"/>
+			<h:inputText value="#{AllotRoomBean.deallocatestudent}" />
+	
+		</div>
+		<br/>
+		<br/>
+		<div id="submitBtn" class="textPlacement">
+			<h:commandButton value="Deallocate By Student ID" styleClass="logout"
+				action="#{AllotRoomBean.deallocatebystudent}" />
+		</div>
+		
+	</h:form>
+</h:body>
+</html>

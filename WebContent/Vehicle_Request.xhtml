@@ -1,0 +1,120 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+	<title>HMS | Cooler Request</title>
+	<h:outputStylesheet library="css" name="style1.css" />
+	<style type="text/css">
+.logout {
+background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+ border-style: solid;
+  border-width: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 90px;
+
+}
+.successText {
+	color: black;
+	margin: 12px;
+	font-weight: bold;
+}
+.logout:hover {
+	background-color: #45a049;
+}
+.logout1 {
+background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  top:0;
+  position:absolute;
+  right:0;
+}
+.logout1:hover {
+	background-color: #45a049;
+}
+.back{
+
+background-color: #87ceeb;
+}
+	</style>
+	<h:outputStylesheet library="css" name="style1.css" />
+
+	
+
+</h:head>
+
+<h:body>
+	<h2>Vehicle Request</h2>
+	<font color="Black">		Welcome, <span id="userName"><h:outputLabel
+					class="successText" value="#{loginBean.userName}" /></span></font>
+					<br/>
+					<br/>
+					<h:form>
+		<div id="submitBtn">
+			<h:commandButton value="Logout" styleClass="logout1"
+				action="#{LogoutBean.logout}" />
+		</div>
+	</h:form>
+
+	<h:form>
+		<h:dataTable value="#{VehicleRequestBean.results}" var="Vehicle"
+			styleClass="coolerTable" headerClass="coolerTableHeader"
+			rowClasses="coolerTableOddRow,coolerTableEvenRow">
+			<h:column>
+				<f:facet name="header">Student ID</f:facet>    				
+               #{Vehicle.curr_id}
+            </h:column>
+
+			<h:column>
+				<f:facet name="header">Vehicle Type</f:facet>    				
+               #{Vehicle.vehicle_type}
+            </h:column>
+
+			<h:column>
+				<f:facet name="header">Vehicle Number</f:facet>
+               #{Vehicle.vehicle_number}
+            </h:column>
+
+			<h:column>
+				<f:facet name="header">Arrival Date</f:facet>
+               #{Vehicle.arrival_date}
+            </h:column>
+
+			<h:column>
+				<f:facet name="header">Student License Number</f:facet>
+               #{Vehicle.license_number}
+            </h:column>
+			<h:column>
+				<f:facet name="header">Reason</f:facet>
+               #{Vehicle.reason}
+            </h:column>
+			<h:column>
+				<f:facet name="header">Action</f:facet>
+				<h:form>
+
+					<div id="submitBtn2" class="textPlacement">
+						<h:commandButton value="Allow" styleClass="logout"
+							action="#{VehicleRequestBean.onAllow(Vehicle.curr_id)}" />
+					</div>
+					<div id="submitBtn" class="textPlacement">
+						<h:commandButton value="Deny" styleClass="logout"
+							action="#{VehicleRequestBean.onDeny(Vehicle.curr_id)}" />
+					</div>
+				</h:form>
+			</h:column>
+		</h:dataTable>
+	</h:form>
+
+</h:body>
+</html>

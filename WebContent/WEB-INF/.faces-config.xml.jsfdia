@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#index.xhtml" PATH="/index.xhtml"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#index.xhtml:0" NAME="item"
+   PATH="/index.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="Student_Homepage:#{loginBean.validateUserLogin}:#Student_Homepage.xhtml"
+    NAME="output" PATH="/Student_Homepage.xhtml"
+    TARGET="rules:#Student_Homepage.xhtml"
+    TITLE="#{loginBean.validateUserLogin}:Student_Homepage" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="index:#{loginBean.validateUserLogin}:#index.xhtml"
+    NAME="output4" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{loginBean.validateUserLogin}:index" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="failure:#{loginBean.validateUserLogin}:#failure.xhtml"
+    NAME="output1" PATH="/failure.xhtml" TARGET="rules:#failure.xhtml"
+    TITLE="#{loginBean.validateUserLogin}:failure" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="Admin_Homepage:#{loginBean.validateUserLogin}:#Admin_Homepage.xhtml"
+    NAME="output2" PATH="/Admin_Homepage.xhtml"
+    TARGET="rules:#Admin_Homepage.xhtml"
+    TITLE="#{loginBean.validateUserLogin}:Admin_Homepage" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#Vehicle_Request.xhtml"
+  PATH="/Vehicle_Request.xhtml" SHAPE="304,1025,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Vehicle_Request.xhtml:0" NAME="item"
+   PATH="/Vehicle_Request.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="Vehicle_Request:#{VehicleRequestBean.onAllow}:#Vehicle_Request.xhtml"
+    NAME="output" PATH="/Vehicle_Request.xhtml"
+    TARGET="rules:#Vehicle_Request.xhtml"
+    TITLE="#{VehicleRequestBean.onAllow}:Vehicle_Request" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="Vehicle_Request:#{VehicleRequestBean.onDeny}:#Vehicle_Request.xhtml"
+    NAME="output1" PATH="/Vehicle_Request.xhtml"
+    TARGET="rules:#Vehicle_Request.xhtml"
+    TITLE="#{VehicleRequestBean.onDeny}:Vehicle_Request" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="login:#{VehicleRequestBean.onAllow}:#index.xhtml" NAME="output2"
+    PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{VehicleRequestBean.onAllow}:login" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="login:#{VehicleRequestBean.onDeny}:#index.xhtml" NAME="output3"
+    PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{VehicleRequestBean.onDeny}:login" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="login:#{LogoutBean.logout}:#index.xhtml"
+    NAME="output4" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{LogoutBean.logout}:login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#Register_Cooler.xhtml"
+  PATH="/Register_Cooler.xhtml" SHAPE="304,689,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Register_Cooler.xhtml:0" NAME="item"
+   PATH="/Register_Cooler.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="Register_Cooler:#{CoolerRegistrationBean.submit}:#Register_Cooler.xhtml"
+    NAME="output" PATH="/Register_Cooler.xhtml"
+    TARGET="rules:#Register_Cooler.xhtml"
+    TITLE="#{CoolerRegistrationBean.submit}:Register_Cooler" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="login:#{CoolerRegistrationBean.submit}:#index.xhtml"
+    NAME="output1" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{CoolerRegistrationBean.submit}:login" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="login:#{LogoutBean.logout}:#index.xhtml"
+    NAME="output2" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{LogoutBean.logout}:login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#Register_Vehicle.xhtml"
+  PATH="/Register_Vehicle.xhtml" SHAPE="304,801,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Register_Vehicle.xhtml:0" NAME="item"
+   PATH="/Register_Vehicle.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="Register_Vehicle:#{VehicleRegistrationBean.submit}:#Register_Vehicle.xhtml"
+    NAME="output" PATH="/Register_Vehicle.xhtml"
+    TARGET="rules:#Register_Vehicle.xhtml"
+    TITLE="#{VehicleRegistrationBean.submit}:Register_Vehicle" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="login:#{LogoutBean.logout}:#index.xhtml"
+    NAME="output1" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{LogoutBean.logout}:login" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="login:#{VehicleRegistrationBean.submit}:#index.xhtml"
+    NAME="output2" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{VehicleRegistrationBean.submit}:login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#Student_Homepage.xhtml"
+  PATH="/Student_Homepage.xhtml" SHAPE="304,33,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Student_Homepage.xhtml:0" NAME="item"
+   PATH="/Student_Homepage.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="Register_Cooler:#{StudentHomepageBean.RedirectCoolerForm}:#Register_Cooler.xhtml"
+    NAME="output" PATH="/Register_Cooler.xhtml"
+    TARGET="rules:#Register_Cooler.xhtml"
+    TITLE="#{StudentHomepageBean.RedirectCoolerForm}:Register_Cooler" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="login:#{StudentHomepageBean.RedirectCoolerForm}:#index.xhtml"
+    NAME="output1" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{StudentHomepageBean.RedirectCoolerForm}:login" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="Register_Vehicle:#{StudentHomepageBean.RedirectVehicleForm}:#Register_Vehicle.xhtml"
+    NAME="output2" PATH="/Register_Vehicle.xhtml"
+    TARGET="rules:#Register_Vehicle.xhtml"
+    TITLE="#{StudentHomepageBean.RedirectVehicleForm}:Register_Vehicle" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="login:#{StudentHomepageBean.RedirectVehicleForm}:#index.xhtml"
+    NAME="output3" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{StudentHomepageBean.RedirectVehicleForm}:login" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="login:#{LogoutBean.logout}:#index.xhtml"
+    NAME="output4" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{LogoutBean.logout}:login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#Cooler_Request.xhtml"
+  PATH="/Cooler_Request.xhtml" SHAPE="304,913,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Cooler_Request.xhtml:0" NAME="item"
+   PATH="/Cooler_Request.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="Cooler_Request:#{CoolerRequestBean.onAllow}:#Cooler_Request.xhtml"
+    NAME="output" PATH="/Cooler_Request.xhtml"
+    TARGET="rules:#Cooler_Request.xhtml"
+    TITLE="#{CoolerRequestBean.onAllow}:Cooler_Request" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="login:#{CoolerRequestBean.onDeny}:#index.xhtml" NAME="output2"
+    PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{CoolerRequestBean.onDeny}:login" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="login:#{CoolerRequestBean.onAllow}:#index.xhtml" NAME="output1"
+    PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{CoolerRequestBean.onAllow}:login" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="Cooler_Request:#{CoolerRequestBean.onDeny}:#Cooler_Request.xhtml"
+    NAME="output3" PATH="/Cooler_Request.xhtml"
+    TARGET="rules:#Cooler_Request.xhtml"
+    TITLE="#{CoolerRequestBean.onDeny}:Cooler_Request" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="login:#{LogoutBean.logout}:#index.xhtml"
+    NAME="output4" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{LogoutBean.logout}:login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#Electricity_Bill.xhtml"
+  PATH="/Electricity_Bill.xhtml" SHAPE="304,529,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Electricity_Bill.xhtml:0" NAME="item"
+   PATH="/Electricity_Bill.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="HOR:#{ElectricityBillBean.RedirectHor}:#Electricity_Bill_Hor.xhtml"
+    NAME="output" PATH="/Electricity_Bill_Hor.xhtml"
+    TARGET="rules:#Electricity_Bill_Hor.xhtml"
+    TITLE="#{ElectricityBillBean.RedirectHor}:HOR" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="WING:#{ElectricityBillBean.RedirectWing}:#Electricity_Bill_Wing.xhtml"
+    NAME="output1" PATH="/Electricity_Bill_Wing.xhtml"
+    TARGET="rules:#Electricity_Bill_Wing.xhtml"
+    TITLE="#{ElectricityBillBean.RedirectWing}:WING" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="STUDENT:#{ElectricityBillBean.RedirectStu}:#Electricity_Bill_Student.xhtml"
+    NAME="output2" PATH="/Electricity_Bill_Student.xhtml"
+    TARGET="rules:#Electricity_Bill_Student.xhtml"
+    TITLE="#{ElectricityBillBean.RedirectStu}:STUDENT" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="login:#{LogoutBean.logout}:#index.xhtml"
+    NAME="output3" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{LogoutBean.logout}:login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#Electricity_Bill_Student.xhtml"
+  PATH="/Electricity_Bill_Student.xhtml" SHAPE="304,817,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Electricity_Bill_Student.xhtml:0" NAME="item"
+   PATH="/Electricity_Bill_Student.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="Electricity_Student:#{ElectricityBillBean.AddStuFee}:#Electricity_Bill_Student.xhtml"
+    NAME="output1" PATH="/Electricity_Bill_Student.xhtml"
+    TARGET="rules:#Electricity_Bill_Student.xhtml"
+    TITLE="#{ElectricityBillBean.AddStuFee}:Electricity_Student" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="HOR:#{ElectricityBillBean.RedirectHor}:#Electricity_Bill_Hor.xhtml"
+    NAME="output" PATH="/Electricity_Bill_Hor.xhtml"
+    TARGET="rules:#Electricity_Bill_Hor.xhtml"
+    TITLE="#{ElectricityBillBean.RedirectHor}:HOR" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="WING:#{ElectricityBillBean.RedirectWing}:#Electricity_Bill_Wing.xhtml"
+    NAME="output2" PATH="/Electricity_Bill_Wing.xhtml"
+    TARGET="rules:#Electricity_Bill_Wing.xhtml"
+    TITLE="#{ElectricityBillBean.RedirectWing}:WING" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="STUDENT:#{ElectricityBillBean.RedirectStu}:#Electricity_Bill_Student.xhtml"
+    NAME="output3" PATH="/Electricity_Bill_Student.xhtml"
+    TARGET="rules:#Electricity_Bill_Student.xhtml"
+    TITLE="#{ElectricityBillBean.RedirectStu}:STUDENT" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="login:#{LogoutBean.logout}:#index.xhtml"
+    NAME="output4" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{LogoutBean.logout}:login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#Electricity_Bill_Wing.xhtml"
+  PATH="/Electricity_Bill_Wing.xhtml" SHAPE="304,705,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Electricity_Bill_Wing.xhtml:0" NAME="item"
+   PATH="/Electricity_Bill_Wing.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="HOR:#{ElectricityBillBean.RedirectHor}:#Electricity_Bill_Hor.xhtml"
+    NAME="output" PATH="/Electricity_Bill_Hor.xhtml"
+    TARGET="rules:#Electricity_Bill_Hor.xhtml"
+    TITLE="#{ElectricityBillBean.RedirectHor}:HOR" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="WING:#{ElectricityBillBean.RedirectWing}:#Electricity_Bill_Wing.xhtml"
+    NAME="output1" PATH="/Electricity_Bill_Wing.xhtml"
+    TARGET="rules:#Electricity_Bill_Wing.xhtml"
+    TITLE="#{ElectricityBillBean.RedirectWing}:WING" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="STUDENT:#{ElectricityBillBean.RedirectStu}:#Electricity_Bill_Student.xhtml"
+    NAME="output2" PATH="/Electricity_Bill_Student.xhtml"
+    TARGET="rules:#Electricity_Bill_Student.xhtml"
+    TITLE="#{ElectricityBillBean.RedirectStu}:STUDENT" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="Electricity_Wing:#{ElectricityBillBean.addWingBill}:#Electricity_Bill_Wing.xhtml"
+    NAME="output3" PATH="/Electricity_Bill_Wing.xhtml"
+    TARGET="rules:#Electricity_Bill_Wing.xhtml"
+    TITLE="#{ElectricityBillBean.addWingBill}:Electricity_Wing" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="login:#{LogoutBean.logout}:#index.xhtml"
+    NAME="output4" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{LogoutBean.logout}:login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#Electricity_Bill_Hor.xhtml"
+  PATH="/Electricity_Bill_Hor.xhtml" SHAPE="304,593,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Electricity_Bill_Hor.xhtml:0" NAME="item"
+   PATH="/Electricity_Bill_Hor.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="HOR:#{ElectricityBillBean.RedirectHor}:#Electricity_Bill_Hor.xhtml"
+    NAME="output" PATH="/Electricity_Bill_Hor.xhtml"
+    TARGET="rules:#Electricity_Bill_Hor.xhtml"
+    TITLE="#{ElectricityBillBean.RedirectHor}:HOR" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="WING:#{ElectricityBillBean.RedirectWing}:#Electricity_Bill_Wing.xhtml"
+    NAME="output1" PATH="/Electricity_Bill_Wing.xhtml"
+    TARGET="rules:#Electricity_Bill_Wing.xhtml"
+    TITLE="#{ElectricityBillBean.RedirectWing}:WING" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="STUDENT:#{ElectricityBillBean.RedirectStu}:#Electricity_Bill_Student.xhtml"
+    NAME="output2" PATH="/Electricity_Bill_Student.xhtml"
+    TARGET="rules:#Electricity_Bill_Student.xhtml"
+    TITLE="#{ElectricityBillBean.RedirectStu}:STUDENT" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="Electricity_Hor:#{ElectricityBillBean.addHorBill}:#Electricity_Bill_Hor.xhtml"
+    NAME="output3" PATH="/Electricity_Bill_Hor.xhtml"
+    TARGET="rules:#Electricity_Bill_Hor.xhtml"
+    TITLE="#{ElectricityBillBean.addHorBill}:Electricity_Hor" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="login:#{LogoutBean.logout}:#index.xhtml"
+    NAME="output4" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{LogoutBean.logout}:login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#failure.xhtml" PATH="/failure.xhtml"
+  SHAPE="304,689,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#Admin_Homepage.xhtml"
+  PATH="/Admin_Homepage.xhtml" SHAPE="288,241,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Admin_Homepage.xhtml:0" NAME="item"
+   PATH="/Admin_Homepage.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="Cooler_Request:#{AdminHomepageBean.RedirectCoolerRequest}:#Cooler_Request.xhtml"
+    NAME="output" PATH="/Cooler_Request.xhtml"
+    TARGET="rules:#Cooler_Request.xhtml"
+    TITLE="#{AdminHomepageBean.RedirectCoolerRequest}:Cooler_Request" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="login:#{AdminHomepageBean.RedirectCoolerRequest}:#index.xhtml"
+    NAME="output1" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{AdminHomepageBean.RedirectCoolerRequest}:login" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="Vehicle_Request:#{AdminHomepageBean.RedirectVehicleRequest}:#Vehicle_Request.xhtml"
+    NAME="output2" PATH="/Vehicle_Request.xhtml"
+    TARGET="rules:#Vehicle_Request.xhtml"
+    TITLE="#{AdminHomepageBean.RedirectVehicleRequest}:Vehicle_Request" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="login:#{AdminHomepageBean.RedirectVehicleRequest}:#index.xhtml"
+    NAME="output3" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{AdminHomepageBean.RedirectVehicleRequest}:login" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="Electricity_Bill:#{AdminHomepageBean.RedirectElectricityBill}:#Electricity_Bill.xhtml"
+    NAME="output4" PATH="/Electricity_Bill.xhtml"
+    TARGET="rules:#Electricity_Bill.xhtml"
+    TITLE="#{AdminHomepageBean.RedirectElectricityBill}:Electricity_Bill" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="login:#{AdminHomepageBean.RedirectElectricityBill}:#index.xhtml"
+    NAME="output5" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{AdminHomepageBean.RedirectElectricityBill}:login" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="login:#{AdminHomepageBean.RedirectAllotRoom}:#index.xhtml"
+    NAME="output6" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{AdminHomepageBean.RedirectAllotRoom}:login" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="login:#{AdminHomepageBean.RedirectRoomChart}:#index.xhtml"
+    NAME="output7" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{AdminHomepageBean.RedirectRoomChart}:login" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="login:#{LogoutBean.logout}:#index.xhtml"
+    NAME="output8" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{LogoutBean.logout}:login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#Allot_Room.xhtml" PATH="/Allot_Room.xhtml"
+  SHAPE="560,337,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Allot_Room.xhtml:0" NAME="item"
+   PATH="/Allot_Room.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="Room_Allot:#{AllotRoomBean.submitsingle}:#Allot_Room.xhtml"
+    NAME="output" PATH="/Allot_Room.xhtml"
+    TARGET="rules:#Allot_Room.xhtml"
+    TITLE="#{AllotRoomBean.submitsingle}:Room_Allot" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="Room_Allot:#{AllotRoomBean.submitall}:#Allot_Room.xhtml"
+    NAME="output1" PATH="/Allot_Room.xhtml"
+    TARGET="rules:#Allot_Room.xhtml"
+    TITLE="#{AllotRoomBean.submitall}:Room_Allot" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="deallocate:#{AllotRoomBean.Redirectdeallocate}:#Deallocate_Room.xhtml"
+    NAME="output2" PATH="/Deallocate_Room.xhtml"
+    TARGET="rules:#Deallocate_Room.xhtml"
+    TITLE="#{AllotRoomBean.Redirectdeallocate}:deallocate" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="login:#{LogoutBean.logout}:#index.xhtml"
+    NAME="output3" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{LogoutBean.logout}:login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#Deallocate_Room.xhtml"
+  PATH="/Deallocate_Room.xhtml" SHAPE="800,561,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Deallocate_Room.xhtml:0" NAME="item"
+   PATH="/Deallocate_Room.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="deallocate:#{AllotRoomBean.deallocatebyroom}:#Deallocate_Room.xhtml"
+    NAME="output" PATH="/Deallocate_Room.xhtml"
+    TARGET="rules:#Deallocate_Room.xhtml"
+    TITLE="#{AllotRoomBean.deallocatebyroom}:deallocate" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="deallocate:#{AllotRoomBean.deallocatebystudent}:#Deallocate_Room.xhtml"
+    NAME="output1" PATH="/Deallocate_Room.xhtml"
+    TARGET="rules:#Deallocate_Room.xhtml"
+    TITLE="#{AllotRoomBean.deallocatebystudent}:deallocate" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="login:#{LogoutBean.logout}:#index.xhtml"
+    NAME="output2" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{LogoutBean.logout}:login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#Hostel_Chart.xhtml"
+  PATH="/Hostel_Chart.xhtml" SHAPE="576,337,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

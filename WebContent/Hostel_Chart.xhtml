@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>HMS | Hostel Chart</title>
+	<style type="text/css">
+.textPlacement {
+	margin: 12px;
+}
+</style>
+	<h:outputStylesheet library="css" name="style1.css" />
+</h:head>
+<h:body>
+	<h:messages globalOnly="true" style="color:red;margin:8px;" />
+
+	<h:dataTable value="#{chart.wings}" var="wing" styleClass="WingTable"
+		headerClass="coolerTableHeader"
+		>
+
+		<h:column>
+		<br/>
+		<br/>
+			<h:outputText value="Wing #{wing.type}" />
+			
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<h:column>
+				<h:dataTable value="#{wing.floors}" var="floor"
+					styleClass="FloorTable" headerClass="coolerTableHeader"
+					>
+					<br/>
+		<br/>
+					<h:column>
+							<br/>
+		<br/>
+						<h:outputText value="Floor #{floor.type}" />
+						
+						<hr/>
+						<hr/>
+						<hr/>
+
+						<h:column>
+							<h:dataTable value="#{floor.rooms}" var="room"
+								styleClass="RoomTable" headerClass="coolerTableHeader"
+								>
+								<h:column>
+									<h:outputText value="Room #{room.name}" />
+									<br/>
+									<h:column>
+										<h:dataTable value="#{room.students}" var="s"
+											styleClass="StudentTable" headerClass="coolerTableHeader"
+											>
+											<h:column>
+											
+												<h:outputText value="#{s}" />
+												
+
+
+											</h:column>
+
+										</h:dataTable>
+										<br/>
+									</h:column>
+
+								</h:column>
+
+							</h:dataTable>
+						</h:column>
+					</h:column>
+
+				</h:dataTable>
+			</h:column>
+		</h:column>
+
+
+	</h:dataTable>
+</h:body>
+</html>

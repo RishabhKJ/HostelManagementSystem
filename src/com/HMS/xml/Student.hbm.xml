@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.HMS.entity.Student" table="login">
+		<id name="id" type="long" column="Id">
+			<generator class="increment" />
+		</id>
+		<property name="stuid" column="username" not-null="true" />
+		<property name="stupassword" column="password" />
+	</class>
+
+	<class name="com.HMS.entity.Cooler" table="cooler">
+		<id name="id" type="long" column="Id">
+			<generator class="increment" />
+		</id>
+		<property name="curr_id" column="user_id" />
+		<property name="cooler_type" column="cooler_type" />
+		<property name="company" column="company" />
+		<property name="arrival_date" column="arrival_date" />
+		<property name="depature_date" column="depature_date" />
+		<property name="reason" column="reason" />
+		<property name="status" column="status" />
+	</class>
+	<class name="com.HMS.entity.Vehicle" table="vehicle">
+		<id name="id" type="long" column="Id">
+			<generator class="increment" />
+		</id>
+		<property name="curr_id" column="user_id" />
+		<property name="vehicle_type" column="vehicle_type" />
+		<property name="vehicle_number" column="vehicle_number" />
+		<property name="arrival_date" column="arrival_date" />
+		<property name="license_number" column="license_number" />
+		<property name="reason" column="reason" />
+
+		<property name="status" column="status" />
+	</class>
+	<class name="com.HMS.entity.Room" table="room">
+		<id name="id" type="long" column="Id">
+			<generator class="increment" />
+		</id>
+		<property name="stu_id" column="stu_id" />
+		<property name="hor" column="hor" />
+		<property name="room" column="room" />
+		<property name="floor" column="floor" />
+		<property name="ele_bill" column="ele_bill" />
+		<property name="wing" column="wing" />
+
+	</class>
+	<class name="com.HMS.entity.Student_details"
+		table="student_details">
+		<id name="id" type="long" column="Id">
+			<generator class="increment" />
+		</id>
+		<property name="stu_id" column="stu_id" />
+		<property name="full_name" column="full_name" />
+		<property name="blood_group" column="blood_group" />
+		<property name="gender" column="gender" />
+		<property name="contact" column="contact" />
+
+		<property name="allocated" column="allocated" />
+	</class>
+	<class name="com.HMS.entity.Hor_room_allocate" table="hor_rooms">
+		<id name="id" type="long" column="Id">
+			<generator class="increment" />
+		</id>
+		<property name="hor" column="hor" />
+		<property name="wing" column="wing" />
+		<property name="floor" column="floor" />
+		<property name="room" column="room" />
+		<property name="status" column="status" />
+
+
+	</class>
+
+</hibernate-mapping>
