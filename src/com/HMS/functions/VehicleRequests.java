@@ -78,8 +78,8 @@ public class VehicleRequests {
 			String to = req_id + "@daiict.ac.in";
 			String sub = "Vehicle Registration Confirmation";
 			String msg = "Dear Student, we have approved your vehicle registration.";
-			String user = "sri.hms.2019@gmail.com";
-			String pass = "hellosri";
+			String user = "";
+			String pass = "";
 			Sendmail.send(to, sub, msg, user, pass);
 		} catch (HibernateException e) {
 			System.out.println(e.getMessage());
@@ -106,8 +106,8 @@ public class VehicleRequests {
 			String to = req_id + "@daiict.ac.in";
 			String sub = "Vehicle Registration Rejection";
 			String msg = "Dear Student, we have rejected your request for vehicle registration.";
-			String user = "sri.hms.2019@gmail.com";
-			String pass = "hellosri";
+			String user = "";
+			String pass = "";
 			Sendmail.send(to, sub, msg, user, pass);
 		} catch (HibernateException e) {
 			System.out.println(e.getMessage());
