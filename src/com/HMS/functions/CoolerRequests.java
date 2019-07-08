@@ -103,11 +103,11 @@ public class CoolerRequests {
 			update.where(builder.equal(e.get("curr_id"), req_id));
 			s.createQuery(update).executeUpdate();
 			tx.commit();
-			String to = req_id + "@daiict.ac.in";
+			String to = req_id + "";
 			String sub = "Cooler Registration Rejection";
 			String msg = "Dear Student, we have rejected your request for cooler registration.";
-			String user = "sri.hms.2019@gmail.com";
-			String pass = "hellosri";
+			String user = "";
+			String pass = "";
 			Sendmail.send(to, sub, msg, user, pass);
 		} catch (HibernateException e) {
 			System.out.println(e.getMessage());
