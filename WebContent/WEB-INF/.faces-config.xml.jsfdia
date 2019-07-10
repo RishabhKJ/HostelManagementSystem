@@ -352,5 +352,12 @@
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#Hostel_Chart.xhtml"
-  PATH="/Hostel_Chart.xhtml" SHAPE="576,337,0,0" model-entity="JSFProcessGroup"/>
+  PATH="/Hostel_Chart.xhtml" SHAPE="576,337,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Hostel_Chart.xhtml:0" NAME="item"
+   PATH="/Hostel_Chart.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="login:#{LogoutBean.logout}:#index.xhtml"
+    NAME="output" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{LogoutBean.logout}:login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
 </PROCESS>

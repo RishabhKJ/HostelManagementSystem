@@ -396,6 +396,15 @@
 			<to-view-id>/index.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/Hostel_Chart.xhtml</from-view-id>
+			<navigation-case>
+			<from-action>#{LogoutBean.logout}</from-action>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/index.xhtml</to-view-id>
+		</navigation-case>
+		</navigation-rule>
 
 
 
