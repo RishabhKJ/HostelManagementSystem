@@ -10,16 +10,22 @@
 	<title>HMS | Room Allotment</title>
 	<h:outputStylesheet library="css" name="style1.css" />
 	<style type="text/css">
+	.textPlacement {
+	margin: 12px;
+	text-align : center
+}
+	
 .logout {
 	background-color: #4CAF50;
 	color: white;
 	padding: 12px 20px;
 	border-style: solid;
-	border-width: 5px;
+	border-width: 1px;
 	border-radius: 4px;
 	cursor: pointer;
 	margin-left: 90px;
-	border-color: Black
+	border-color: Black;
+	width : 10%
 }
 
 .logout:hover {
@@ -29,9 +35,9 @@
 .logout1 {
 	background-color: #4CAF50;
 	color: white;
-	padding: 12px 20px;
+	padding: 18px 20px;
 	border: none;
-	border-radius: 4px;
+	border-radius: 0px;
 	cursor: pointer;
 	top: 0;
 	position: absolute;
@@ -46,26 +52,76 @@
 	margin: 12px;
 	font-weight: bold;
 }
+.topright {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 18px;
+}
+
+.top {
+	position: absolute;
+	top: 0;
+	left: 250px;
+	right: 250px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.back {
+	background-color: #87ceeb;
+}
+
+.center {
+	text-align: center
+}
 </style>
 </h:head>
 
 <h:body>
-	<h2>Room Allotment</h2>
+	<h:graphicImage library="images" name="new.png" styleClass="user"></h:graphicImage>
 
-
-
-
-	<font color="Black"> Welcome, <span id="userName"><h:outputLabel
-				class="successText" value="#{loginBean.userName}" /></span></font>
-	<br />
-	<br />
 	<h:form>
-	<h:messages globalOnly="true" style="color:red;margin:8px;" />
-		<div id="submitBtn">
-			<h:commandButton value="Logout" styleClass="logout1"
-				action="#{LogoutBean.logout}" />
+		<div class="topnav">
+
+			<!-- Centered link -->
+			<div class="topnav-centered">
+				<a href="Admin_Homepage.xhtml" class="active">Home</a>
+			</div>
+
+			<!-- Left-aligned links (default) -->
+			<a href="Cooler_Request.xhtml">Cooler Requests</a> <a
+				href="Vehicle_Request.xhtml">Vehicle Requests</a> <a
+				href="Electricity_Bill.xhtml">Electricity Bill</a>
+
+			<!-- Right-aligned links -->
+			<div class="topnav-right">
+				<a href="Allot_Room.xhtml">Room Allotment</a> <a
+					href="Hostel_Chart.xhtml">Room Chart</a> <a
+					href="http://www.daiict.ac.in">About</a> <a href="#search">About</a>
+
+			</div>
+			<div id="submitBtn">
+				<h:commandButton value="Logout" styleClass="logout1"
+					action="#{LogoutBean.logout}" />
+			</div>
+		</div>
+		<br />
+		<br />
+		<h2>Room Allotment</h2>
+		<div class="topright">
+			<font color="Black">Logged in as<span id="userName"><h:outputLabel
+						class="successText" value="#{loginBean.userName}" /></span></font>
 		</div>
 
+		<br />
+
+
+	</h:form>
+	<h:messages globalOnly="true" style="color:red;margin:8px;" />
+	<h:form>
+	
+	
 	<div style="width: 100%;">
 		<div style="width: 50%; float: left;">
 				<h:dataTable value="#{AllotRoomBean.student_list}"
@@ -107,16 +163,19 @@
                #{hor_room_allocate.hor}
             </h:column>
 				</h:dataTable>
+				<br/>
 			</div>
 			<br/>
 			<br/>
 			<br/>
+			<div class="textPlacement">
 			<h:commandButton value="Allot Singly" styleClass="logout"
 				action="#{AllotRoomBean.submitsingle}" />
 			<h:commandButton value="Allot All" styleClass="logout"
 				action="#{AllotRoomBean.submitall}" />
 			<h:commandButton value="Deallocate" styleClass="logout"
 				action="#{AllotRoomBean.Redirectdeallocate}" />
+				</div>
 	</div>
 	
 

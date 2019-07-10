@@ -286,16 +286,26 @@
     NAME="output5" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
     TITLE="#{AdminHomepageBean.RedirectElectricityBill}:login" model-entity="JSFProcessItemOutput"/>
    <PROCESS-ITEM-OUTPUT
+    ID="Allot_Room:#{AdminHomepageBean.RedirectAllotRoom}:#Allot_Room.xhtml"
+    NAME="output6" PATH="/Allot_Room.xhtml"
+    TARGET="rules:#Allot_Room.xhtml"
+    TITLE="#{AdminHomepageBean.RedirectAllotRoom}:Allot_Room" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
     ID="login:#{AdminHomepageBean.RedirectAllotRoom}:#index.xhtml"
-    NAME="output6" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    NAME="output7" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
     TITLE="#{AdminHomepageBean.RedirectAllotRoom}:login" model-entity="JSFProcessItemOutput"/>
    <PROCESS-ITEM-OUTPUT
     ID="login:#{AdminHomepageBean.RedirectRoomChart}:#index.xhtml"
-    NAME="output7" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
-    TITLE="#{AdminHomepageBean.RedirectRoomChart}:login" model-entity="JSFProcessItemOutput"/>
-   <PROCESS-ITEM-OUTPUT ID="login:#{LogoutBean.logout}:#index.xhtml"
     NAME="output8" PATH="/index.xhtml" TARGET="rules:#index.xhtml"
-    TITLE="#{LogoutBean.logout}:login" model-entity="JSFProcessItemOutput"/>
+    TITLE="#{AdminHomepageBean.RedirectRoomChart}:login" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="login:#{CoolerRequestBean.onDeny}:#index.xhtml" NAME="output9"
+    PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{CoolerRequestBean.onDeny}:login" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="login:#{CoolerRequestBean.onAllow}:#index.xhtml" NAME="output10"
+    PATH="/index.xhtml" TARGET="rules:#index.xhtml"
+    TITLE="#{CoolerRequestBean.onAllow}:login" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#Allot_Room.xhtml" PATH="/Allot_Room.xhtml"

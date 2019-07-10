@@ -7,58 +7,122 @@
 	<style type="text/css">
 .textPlacement {
 	margin: 12px;
-}.logout {
-background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
- border-style: solid;
-  border-width: 5px;
-  border-radius: 4px;
-  cursor: pointer;
-  border-color: black;
-
 }
+
+.logout {
+	background-color: #4CAF50;
+	color: white;
+	padding: 12px 20px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 4px;
+	cursor: pointer;
+	border-color: black;
+	width: 10%;
+}
+
 .successText {
 	color: black;
 	margin: 12px;
 	font-weight: bold;
 }
+
 .style {
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.style1 {
 	font-weight: bold;
 	font-size: 18px;
 }
+
 .logout:hover {
 	background-color: #45a049;
 }
+
 .logout1 {
-background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  top:0;
-  position:absolute;
-  right:0;
+	background-color: #4CAF50;
+	color: white;
+	padding: 18px 20px;
+	border: none;
+	border-radius: 0px;
+	cursor: pointer;
+	top: 0;
+	position: absolute;
+	right: 0;
 }
+
 .logout1:hover {
 	background-color: #45a049;
+}
+
+.topright {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 18px;
+}
+
+.top {
+	position: absolute;
+	top: 0;
+	left: 250px;
+	right: 250px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.back {
+	background-color: #87ceeb;
+}
+
+.center {
+	text-align: center
 }
 </style>
 	<h:outputStylesheet library="css" name="style1.css" />
 </h:head>
 <h:body>
-<h2>Electricity Bill</h2>
-	<font color="Black">		Welcome, <span id="userName"><h:outputLabel
-					class="successText" value="#{loginBean.userName}" /></span></font>
-					<br/>
-					<br/>
-					<h:form>
-		<div id="submitBtn">
-			<h:commandButton value="Logout" styleClass="logout1"
-				action="#{LogoutBean.logout}" />
+	<h:graphicImage library="images" name="new.png" styleClass="user"></h:graphicImage>
+	<h:form>
+		<div class="topnav">
+
+			<!-- Centered link -->
+			<div class="topnav-centered">
+				<a href="Admin_Homepage.xhtml" class="active">Home</a>
+			</div>
+
+			<!-- Left-aligned links (default) -->
+			<a href="Cooler_Request.xhtml">Cooler Requests</a> <a
+				href="Vehicle_Request.xhtml">Vehicle Requests</a> <a
+				href="Electricity_Bill.xhtml">Electricity Bill</a>
+
+			<!-- Right-aligned links -->
+			<div class="topnav-right">
+				<a href="Allot_Room.xhtml">Room Allotment</a> <a
+					href="Hostel_Chart.xhtml">Room Chart</a> <a
+					href="http://www.daiict.ac.in">About</a> <a href="#search">About</a>
+
+			</div>
+			<div id="submitBtn">
+				<h:commandButton value="Logout" styleClass="logout1"
+					action="#{LogoutBean.logout}" />
+			</div>
 		</div>
+		<br />
+		<br />
+		<h2>Electricity Bill</h2>
+		<div class="topright">
+			<font color="Black">Logged in as<span id="userName"><h:outputLabel
+						class="successText" value="#{loginBean.userName}" /></span></font>
+		</div>
+
+		<br />
+
+
 	</h:form>
+
 	<h:messages globalOnly="true" style="color:red;margin:8px;" />
 
 	<h:form id="ElectricForm2">
@@ -74,19 +138,19 @@ background-color: #4CAF50;
 			<h:commandButton value="Student Wise" styleClass="logout"
 				action="#{ElectricityBillBean.RedirectStu}" />
 		</div>
-		<hr />
-		<hr />
+		<br />
+		<br />
 
 		<div id="IdDiv" class="textPlacement">
-			<h:outputLabel value="Student_id: " styleClass="style" />
+			<h:outputLabel value="Student_id: " styleClass="style1" />
 			<h:inputText value="#{ElectricityBillBean.fee_id}" />
 		</div>
 		<div id="FeeDiv" class="textPlacement">
-			<h:outputLabel value="Fee: " styleClass="style" />
+			<h:outputLabel value="Fee: " styleClass="style1" />
 			<h:inputText value="#{ElectricityBillBean.billvalue}" />
 		</div>
 		<div id="submitBtn2" class="textPlacement">
-			<h:commandButton value="ADD Bill" styleClass="logout"
+			<h:commandButton value="Add Bill" styleClass="logout"
 				action="#{ElectricityBillBean.AddStuFee()}" />
 		</div>
 
