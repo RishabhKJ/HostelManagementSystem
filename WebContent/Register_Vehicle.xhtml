@@ -12,6 +12,87 @@
 	<style type="text/css">
 .textPlacement {
 	margin: 12px;
+	font-weight: bold;
+	font-size: 15px;
+	
+}
+.successText {
+	color: black;
+	margin: 12px;
+	font-weight: bold;
+}
+.container
+{
+border-radius: 5px;
+background-color:  #f4a460;
+padding : 100px;
+}
+.topright {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 18px;
+}
+
+.top {
+	position: absolute;
+	top: 0;
+	left: 250px;
+	right: 250px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.back {
+	background-color: #87ceeb;
+}
+
+.center {
+	text-align: center
+}
+.logout {
+	background-color: #4CAF50;
+	color: white;
+	padding: 12px 20px;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 4px;
+	cursor: pointer;
+	border-color: black;
+	width: 10%;
+}
+.logout:hover {
+	background-color: #45a049;
+}
+
+.logout1 {
+	background-color: #4CAF50;
+	color: white;
+	padding: 18px 20px;
+	border: none;
+	border-radius: 0px;
+	cursor: pointer;
+	top: 0;
+	position: absolute;
+	right: 0;
+}
+
+.logout1:hover {
+	background-color: #45a049;
+}
+
+.textarea
+{
+
+width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally)
+  
 }
 
 .back {
@@ -26,26 +107,55 @@
 	font-weight: bold;
 	font-size: 22px;
 }
+
+.style1 {
+	font-weight: bold;
+	font-size: 18px;
+}
+
 </style>
-	<h:outputStylesheet library="css" name="style.css" />
+	<h:outputStylesheet library="css" name="style1.css" />
 
 </h:head>
-<h:body styleClass="back">
+<h:body>
+	<h:graphicImage library="images" name="new.png" styleClass="user"></h:graphicImage>
+
 	<h:form>
-		<div id="submitBtn">
-			<h:commandButton value="Logout" styleClass="logout"
-				action="#{LogoutBean.logout}" />
+		<div class="topnav">
+
+			<!-- Centered link -->
+			<div class="topnav-centered">
+				<a href="Student_Homepage.xhtml" class="active">Home</a>
+			</div>
+
+			<!-- Left-aligned links (default) -->
+			<a href="Register_Cooler.xhtml">Register Cooler</a> <a
+				href="Register_Vehicle.xhtml">Register Vehicle</a> 
+				
+
+			<!-- Right-aligned links -->
+			<div class="topnav-right">
+				 <a
+					href="http://www.daiict.ac.in">About</a> <a href="#search">About</a>
+
+			</div>
+			<div id="submitBtn">
+				<h:commandButton value="Logout" styleClass="logout1"
+					action="#{LogoutBean.logout}" />
+			</div>
 		</div>
+		<br />
+		<br />
+		<h2>Vehicle Registration</h2>
+		<div class="topright">
+			<font color="Black">Logged in as<span id="userName"><h:outputLabel
+						class="successText" value="#{loginBean.userName}" /></span></font>
+		</div>
+
+		<br />
+
+
 	</h:form>
-	<font color="WHITE"><h2>Vehicle Registration</h2></font>
-	<div id="result">
-		<font color="WHITE">Welcome, <h:outputLabel class="successText"
-				value="#{loginBean.userName}" /></font>
-
-	</div>
-	<br />
-	<br />
-
 
 
 	<h:form id="VehicleForm" styleClass="container">
@@ -83,7 +193,7 @@
 
 		</div>
 		<div id="submitBtn" class="textPlacement">
-			<h:commandButton value="Submit" styleClass="submit"
+			<h:commandButton value="Submit" styleClass="logout"
 				action="#{VehicleRegistrationBean.submit}" />
 		</div>
 	</h:form>
